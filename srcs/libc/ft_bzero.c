@@ -6,7 +6,7 @@
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 01:59:29 by htoe              #+#    #+#             */
-/*   Updated: 2026/01/14 02:13:01 by htoe             ###   ########.fr       */
+/*   Updated: 2026/01/14 03:59:27 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
-	size_t	i;
 
 	str = (char *)s;
 	if (!str)
 		return ;
-	i = 0;
-	while (i < n)
-		str[i++] = 0;
+	while (n--)
+		*str++ = 0;
 }
