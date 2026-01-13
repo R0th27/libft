@@ -1,9 +1,0 @@
-main.c
-
-a.out
-
-objs/**/
-
-*.o
-
-libft.a
