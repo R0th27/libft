@@ -6,7 +6,7 @@
 #    By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/13 21:58:53 by htoe              #+#    #+#              #
-#    Updated: 2026/01/13 23:23:40 by htoe             ###   ########.fr        #
+#    Updated: 2026/01/14 00:59:34 by htoe             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ re: fclean all
 test: bonus
 	@rm -rf obj
 	@${CC} ${FLAGS} main.c ${NAME}
-	@./a.out
+	@./a.out "012abc"
 	@rm a.out
 
 .PHONY: all clean fclean re test

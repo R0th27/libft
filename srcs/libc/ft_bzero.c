@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 21:54:23 by htoe              #+#    #+#             */
-/*   Updated: 2026/01/14 02:00:52 by htoe             ###   ########.fr       */
+/*   Created: 2026/01/14 01:59:29 by htoe              #+#    #+#             */
+/*   Updated: 2026/01/14 02:13:01 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stddef.h>
 
-//LIBC FUNCTIONS
-//type check
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
+void	ft_bzero(void *s, size_t n)
+{
+	char	*str;
+	size_t	i;
 
-//strings
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-
-#endif
+	str = (char *)s;
+	if (!str)
+		return ;
+	i = 0;
+	while (i < n)
+		str[i++] = 0;
+}
