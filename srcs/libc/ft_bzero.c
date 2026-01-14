@@ -6,19 +6,13 @@
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 01:59:29 by htoe              #+#    #+#             */
-/*   Updated: 2026/01/14 03:59:27 by htoe             ###   ########.fr       */
+/*   Updated: 2026/01/14 08:12:00 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*str;
-
-	str = (char *)s;
-	if (!str)
-		return ;
-	while (n--)
-		*str++ = 0;
+	ft_memset(s, 0, n);
 }

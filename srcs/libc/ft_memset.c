@@ -6,19 +6,17 @@
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 01:33:28 by htoe              #+#    #+#             */
-/*   Updated: 2026/01/14 04:00:47 by htoe             ###   ########.fr       */
+/*   Updated: 2026/01/14 08:12:41 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*str;
+	unsigned char	*str;
 
-	str = (char *)s;
-	if (!str)
-		return (NULL);
+	str = (unsigned char *)s;
 	while (n--)
 		*str++ = c;
 	return (s);
