@@ -6,7 +6,7 @@
 #    By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/13 21:58:53 by htoe              #+#    #+#              #
-#    Updated: 2026/01/16 05:27:11 by htoe             ###   ########.fr        #
+#    Updated: 2026/01/16 05:41:27 by htoe             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,11 +47,4 @@ fclean: clean
 
 re: fclean all
 
-#testing purpose
-test: bonus
-	@rm -rf obj
-	@${CC} ${FLAGS} main.c ${NAME}
-	@./a.out "Akari Min Thant"
-	@rm a.out
-
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re
