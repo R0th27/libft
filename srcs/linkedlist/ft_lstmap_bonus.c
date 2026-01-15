@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/16 01:59:08 by htoe              #+#    #+#             */
-/*   Updated: 2026/01/16 05:11:06 by htoe             ###   ########.fr       */
+/*   Created: 2026/01/16 05:18:55 by htoe              #+#    #+#             */
+/*   Updated: 2026/01/16 05:35:00 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned int	index;
+	t_list	*head;
+	t_list	*node;
 
-	index = 0;
-	if (!s || !f)
-		return ;
-	while (s[index])
+	if (!lst || !f || !del)
+		return (NULL);
+	head = NULL;
+	while (lst)
 	{
-		f(index, &s[index]);
-		index++;
+		node = ft_lstnew(f(lst -> content));
+		if (!node)
+		{
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, node);
+		lst = lst -> next;
 	}
+	return (head);
 }
