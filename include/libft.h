@@ -6,7 +6,7 @@
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 21:54:23 by htoe              #+#    #+#             */
-/*   Updated: 2026/01/15 13:09:17 by htoe             ###   ########.fr       */
+/*   Updated: 2026/01/16 02:13:47 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 //standard headers
 # include <stdlib.h>
 # include <unistd.h>
+
+//testing
+# include <stdio.h>
 
 //LIBC FUNCTIONS * 23
 //type * 5
@@ -50,8 +53,21 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 
 //ADDITIONAL FUNTIONS
+//strings * 5
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+
+//function pointers * 2
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+//write * 4
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
