@@ -6,7 +6,7 @@
 #    By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/13 21:58:53 by htoe              #+#    #+#              #
-#    Updated: 2026/01/16 05:41:27 by htoe             ###   ########.fr        #
+#    Updated: 2026/01/19 07:28:41 by htoe             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ FLAGS = -Wall -Wextra -Werror -Iinclude
 AR = ar rcs
 
 #source_files
-SRCS = ${wildcard srcs/additional/*.c srcs/libc/*.c}
+SRCS = ${wildcard srcs/additional/*.c srcs/libc/*.c srcs/ft_printf/*.c}
 BSRCS = ${wildcard srcs/linkedlist/*.c}
 OBJS = ${SRCS:srcs/%.c=objs/%.o}
 BOBJS = ${BSRCS:srcs/%.c=objs/%.o}
