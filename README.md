@@ -148,6 +148,24 @@ This module demonstrates:
 
 ---
 
+### 4. Formatted Output (`ft_printf`)
+
+A custom implementation of the standard `printf` function, designed as a reusable, self-contained formatting module and later integrated into `libft`.
+
+Supported features include:
+
+* Variadic argument handling (`<stdarg.h>`)
+* Common conversion specifiers:
+  `c`, `s`, `d`, `i`, `u`, `x`, `X`, `p`, `%`
+* Direct output via the `write` system call
+* Precise character counting and return-value semantics matching `printf`
+
+The implementation is internally modular, with parsing, formatting, and output responsibilities clearly separated. Helper routines are kept private to the module and are not exposed through the public `libft` API.
+
+> The full standalone implementation and development history are available in the dedicated [**ft_printf repository**](https://github.com/R0th27/ft_printf)
+
+---
+
 ## Implementation Philosophy
 
 ### Design Decisions
