@@ -6,7 +6,7 @@
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 23:47:08 by htoe              #+#    #+#             */
-/*   Updated: 2026/01/19 03:58:27 by htoe             ###   ########.fr       */
+/*   Updated: 2026/01/21 02:16:38 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdarg.h>
-# include <stddef.h>
 
 int		ft_printf(const char *str, ...);
 void	pf_putchar(char c);
