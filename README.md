@@ -13,14 +13,15 @@ This library is intended as a **foundational dependency** for larger C projects 
 ## Project Structure
 
 ```bash
-
 .
 ├── include
-│   └── libft.h			# Public API
+│   └── libft.h          # Public API
 ├── srcs
-│   ├── libc			# Reimplementation of standard C functions
-│   ├── additional		# Higher-level string and utility functions
-│   └── linkedlist		# Bonus: generic linked list API
+│   ├── libc             # Reimplementation of standard C functions
+│   ├── additional       # Higher-level string and utility functions
+│   ├── ft_printf        # Custom formatted output implementation
+│   ├── get_next_line    # Line-by-line file reader with internal static buffer
+│   └── linkedlist       # Bonus: generic linked list API
 ├── Makefile
 ├── README.md
 
@@ -162,7 +163,17 @@ Supported features include:
 
 The implementation is internally modular, with parsing, formatting, and output responsibilities clearly separated. Helper routines are kept private to the module and are not exposed through the public `libft` API.
 
-> The full standalone implementation and development history are available in the dedicated [**ft_printf repository**](https://github.com/R0th27/ft_printf)
+> The full standalone implementation and development history are available in the dedicated [**ft_printf repository**](https://github.com/R0th27/ft_printf).
+
+---
+
+### 5. Line-Oriented Input (`get_next_line`)
+
+A custom implementation of the `get_next_line` function, designed as a reusable, self-contained line reader and later integrated into `libft`. The function reads from a file descriptor and returns one line per call while correctly handling partial reads, arbitrary line lengths, and end-of-file conditions.
+
+The implementation supports configurable buffer sizes, maintains per-file-descriptor state, and ensures precise memory ownership for every returned line. Internal helpers are modularized and kept private to the module, preventing leakage into the public `libft` API.
+
+> The full standalone implementation and development history are available in the dedicated [**get_next_line repository**](https://github.com/R0th27/get_next_line).
 
 ---
 
