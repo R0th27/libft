@@ -6,7 +6,7 @@
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 21:54:23 by htoe              #+#    #+#             */
-/*   Updated: 2026/01/19 07:28:27 by htoe             ###   ########.fr       */
+/*   Updated: 2026/01/21 01:58:24 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //ft_printf
 int		ft_printf(const char *str, ...);
+
+//get_next_line
+char	*get_next_line(int fd);
 
 #endif
