@@ -224,7 +224,7 @@ This avoids unnecessary passes over data and keeps memory usage predictable.
 
 The Makefile supports:
 
-* `make` — **libc** + **additional functions** only
+* `make` — **libc** + **additional functions** + **ft_printf** + **get_next_line**
 * `make bonus` — **libc** + **additional** + **linked list** API
 
 The build produces a **single static library**:
