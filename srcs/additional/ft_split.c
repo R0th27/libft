@@ -6,7 +6,7 @@
 /*   By: htoe <htoe@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 13:34:18 by htoe              #+#    #+#             */
-/*   Updated: 2026/02/14 19:24:27 by htoe             ###   ########.fr       */
+/*   Updated: 2026/02/14 19:31:17 by htoe             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,8 +97,6 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	word_count = ft_countwords(s, c);
-	if (!word_count)
-		return (NULL);
 	split = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (!split)
 		return (NULL);
